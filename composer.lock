@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f5cd9f3bc419d4287c8d7235f6d91e7",
+    "content-hash": "9d79fb5056bdefe2dfc9cba99555e300",
     "packages": [
         {
             "name": "eloquent/phony",
@@ -67,16 +67,16 @@
         },
         {
             "name": "kahlan/kahlan",
-            "version": "dev-4.0-phony",
+            "version": "dev-phony",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kahlan/kahlan.git",
-                "reference": "a1b1997bc4ea97a9f46a4bda85fc06601d7c54c8"
+                "url": "https://github.com/ezzatron/kahlan.git",
+                "reference": "f0195816aa783cc2a4fcf35eeb916fcfbce72eac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kahlan/kahlan/zipball/a1b1997bc4ea97a9f46a4bda85fc06601d7c54c8",
-                "reference": "a1b1997bc4ea97a9f46a4bda85fc06601d7c54c8",
+                "url": "https://api.github.com/repos/ezzatron/kahlan/zipball/f0195816aa783cc2a4fcf35eeb916fcfbce72eac",
+                "reference": "f0195816aa783cc2a4fcf35eeb916fcfbce72eac",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,16 @@
                     "src/functions.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Kahlan\\Spec\\": "spec/"
+                }
+            },
+            "scripts": {
+                "post-update-cmd": [
+                    "Kahlan\\Cli\\Kahlan::composerPostUpdate"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -110,14 +119,17 @@
             "keywords": [
                 "BDD",
                 "Behavior-Driven Development",
+                "Mock",
                 "Monkey Patching",
+                "Stub",
                 "TDD",
-                "mock",
-                "stub",
-                "testing",
-                "unit test"
+                "Testing",
+                "Unit Test"
             ],
-            "time": "2017-07-07 01:55:52"
+            "support": {
+                "source": "https://github.com/ezzatron/kahlan/tree/phony"
+            },
+            "time": "2017-07-10 23:01:39"
         }
     ],
     "packages-dev": [
